@@ -48,12 +48,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Lax\\EnvironmentIndicator\\": "src"
+      "Lax\\EnvIndicator\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Lax\\EnvironmentIndicator\\Tests\\Unit\\": "tests/phpunit/Unit/"
+      "Lax\\EnvIndicator\\Tests\\Unit\\": "tests/phpunit/Unit/"
     }
   },
   "extra": {
