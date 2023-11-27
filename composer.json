@@ -1,0 +1,62 @@
+{
+  "name": "lax/env-indicator",
+  "description": "Shows environment info on the admin bar.",
+  "homepage": "https://laxmariappan.com",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Lax Mariappan",
+      "email": "lax@laxmariappan.com",
+      "homepage": "https://laxmariappan.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">= 8.0",
+    "inpsyde/wp-context": "^1.5"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "composer/*": true,
+      "inpsyde/*": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "roots/wordpress-core-installer": true
+    }
+  },
+  "scripts": {
+    "cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "psalm": "@php ./vendor/vimeo/psalm/psalm --no-suggestions --find-unused-psalm-suppress --no-diff --no-cache --no-file-cache",
+    "tests": "@php ./vendor/phpunit/phpunit/phpunit",
+    "tests:no-cov": "@php ./vendor/phpunit/phpunit/phpunit --no-coverage",
+    "qa": [
+      "@cs",
+      "@psalm",
+      "@tests:no-cov"
+    ]
+  },
+  "require-dev": {
+    "inpsyde/modularity": "^1.7",
+    "phpunit/phpunit": "~9",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "inpsyde/php-coding-standards": "1.0.0-RC.1",
+    "vimeo/psalm": "^4.30",
+    "php-stubs/wordpress-stubs": "^6.4",
+    "brain/monkey": "^2.6",
+    "johnpbloch/wordpress-core": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lax\\EnvironmentIndicator\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Lax\\EnvironmentIndicator\\Tests\\Unit\\": "tests/phpunit/Unit/"
+    }
+  },
+  "extra": {
+    "wordpress-install-dir": "vendor/wordpress/wordpress"
+  }
+}
