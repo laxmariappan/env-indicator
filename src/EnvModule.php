@@ -32,6 +32,8 @@ class EnvModule implements ServiceModule, ExecutableModule
             return false;
         }
 
+        \add_action('plugins_loaded', [$container->get('EnvService'), 'menu']);
+
         return true;
     }
 }
