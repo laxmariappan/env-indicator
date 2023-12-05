@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset>
+
+    <file>./env-indicator.php</file>
+    <file>./src</file>
+
+    <arg value="sp"/>
+    <arg name="colors"/>
+    <config name="testVersion" value="8.0-"/>
+
+    <config name="text_domain" value="env-indicator"/>
+
+    <rule ref="Inpsyde"/>
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>./env-indicator.php</exclude-pattern>
+    </rule>
+
+    <rule ref="Inpsyde.CodeQuality.Psr4">
+        <properties>
+            <property
+                name="psr4"
+                type="array"
+                value="Lax\EnvIndicator=>src"/>
+        </properties>
+    </rule>
+
+</ruleset>
