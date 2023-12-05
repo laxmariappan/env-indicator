@@ -19,15 +19,15 @@ class EnvService
             return;
         }
 
-        \add_action('admin_bar_menu', [$this, 'createMenu'], 100, 1);
+        \add_action('admin_bar_menu', [$this, 'createMenu'], 20, 1);
     }
 
     public function createMenu(WP_Admin_Bar $adminBar): void
     {
         $adminBar->add_node([
             'id' => 'env-indicator',
-            'title' => 'env: ',
-            'href' => '#',
+            'title' => 'env: ' . \WP_ENVIRONMENT_TYPE,
+            'href' => false,
         ]);
     }
 }
