@@ -4,6 +4,9 @@
 # Log files
 *.log
 
+# Cache files
+*.cache
+
 # htaccess
 /.htaccess
 
