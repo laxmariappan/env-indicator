@@ -20,6 +20,14 @@ This plugin uses Inpsyde's packages modularity and wp-context.
 
 ## Screenshots
 
+[Front end preview](https://github.com/laxmariappan/env-indicator/assets/22427070/8d6e535e-63bb-400e-9da4-79f2f4d7acc1)
+
+![Front end preview](https://github.com/laxmariappan/env-indicator/assets/22427070/8d6e535e-63bb-400e-9da4-79f2f4d7acc1)
+
+### Credits
+
+[Inpsyde WP context](https://github.com/inpsyde/wp-context)
+[Inpsyde Modularity](https://github.com/inpsyde/modularity)
 
 
 
