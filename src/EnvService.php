@@ -6,7 +6,7 @@ namespace Lax\EnvIndicator;
 
 use WP_Admin_Bar;
 
-class SampleService
+class EnvService
 {
     public function __construct()
     {

@@ -9,6 +9,7 @@ use Inpsyde\Modularity\Module\ServiceModule;
 use Inpsyde\Modularity\Module\ModuleClassNameIdTrait;
 use Psr\Container\ContainerInterface;
 use Inpsyde\WpContext;
+use Lax\EnvIndicator\EnvService;
 
 class EnvModule implements ServiceModule, ExecutableModule
 {
@@ -16,7 +17,12 @@ class EnvModule implements ServiceModule, ExecutableModule
 
     public function services(): array
     {
-        return [];
+        return [
+            // phpcs:disable Inpsyde.CodeQuality.LineLength.TooLong,Inpsyde.CodeQuality.VariablesName.SnakeCaseVar
+            'EnvService' => static function (ContainerInterface $_containerInterface): EnvService {
+                return new EnvService();
+            },
+        ];
     }
 
     public function run(ContainerInterface $container): bool
