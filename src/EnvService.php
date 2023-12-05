@@ -30,9 +30,14 @@ class EnvService
     public function createMenu(WP_Admin_Bar $adminBar): void
     {
         $adminBar->add_node([
+            'group' => false,
+            'href' => '#',
             'id' => 'env-indicator',
+            'meta' => [
+                'class' => 'env-indicator',
+            ],
+            'parent' => 'wp-logo',
             'title' => 'env: ' . \WP_ENVIRONMENT_TYPE,
-            'href' => false,
         ]);
     }
 }
