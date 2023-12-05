@@ -19,7 +19,13 @@ class EnvService
             return;
         }
 
+        /**
+         * @see \WP_Admin_Bar::add_node 
+         * Lower the number, higher the priority on the menu. 20 is set to make it second menu item.
+         * 10 is the default.
+         */
         \add_action('admin_bar_menu', [$this, 'createMenu'], 20, 1);
+
     }
 
     public function createMenu(WP_Admin_Bar $adminBar): void
