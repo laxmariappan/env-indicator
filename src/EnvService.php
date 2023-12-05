@@ -36,7 +36,7 @@ class EnvService
             'meta' => [
                 'class' => 'env-indicator',
             ],
-            'parent' => 'wp-logo',
+            'parent' => '',
             'title' => 'env: ' . \WP_ENVIRONMENT_TYPE,
         ]);
     }
