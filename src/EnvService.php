@@ -28,7 +28,13 @@ class EnvService
     }
 
     public function createMenu(WP_Admin_Bar $adminBar): void
-    {
+    {   
+        $env = defined('WP_ENVIRONMENT_TYPE') ? \WP_ENVIRONMENT_TYPE : '';
+
+        if (!$env) {
+            return;
+        }
+
         $adminBar->add_node([
             'group' => false,
             'href' => '#',
@@ -37,7 +43,7 @@ class EnvService
                 'class' => 'env-indicator',
             ],
             'parent' => '',
-            'title' => 'env: ' . \WP_ENVIRONMENT_TYPE,
+            'title' => 'env: ' . $env,
         ]);
     }
 }
